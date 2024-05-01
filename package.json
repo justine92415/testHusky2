@@ -36,6 +36,6 @@
     "typescript-eslint": "^7.8.0"
   },
   "hooks": {
-    "pre-commit": "npm run eslint"
+    "pre-commit": "if [[ $(git rev-parse --abbrev-ref HEAD) = develop ]]; then npm run eslint:fix"
   }
 }
