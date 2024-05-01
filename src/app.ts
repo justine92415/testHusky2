@@ -12,6 +12,4 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 
-var test = 'test';
-
 export default app;
