@@ -9,7 +9,7 @@
     "ts-build": "tsc",
     "build": "npm run ts-build",
     "eslint": "npx eslint .",
-    "eslint:fix": "npx eslint . --fix",
+    "eslint:fix": "npx eslint --fix-dry-run .",
     "prepare": "husky"
   },
   "keywords": [],
@@ -36,6 +36,6 @@
     "typescript-eslint": "^7.8.0"
   },
   "hooks": {
-    "pre-commit": "if [[ $(git rev-parse --abbrev-ref HEAD) = develop ]]; then npm run eslint:fix"
+    "pre-commit": "npm run eslint:fix"
   }
 }

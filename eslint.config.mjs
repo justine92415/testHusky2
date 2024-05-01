@@ -7,9 +7,8 @@ export default tseslint.config({
   ignores: ['node_modules', '**/dist/**' ,'**/connections/**'],
   files: ['src/**/*.ts'],
   extends: [
-    eslint.configs.recommended, 
-    ...tseslint.configs.recommended,
-    ...tseslint.configs.stylistic
+    eslint.configs.recommended,
+    ...tseslint.configs.recommended
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
